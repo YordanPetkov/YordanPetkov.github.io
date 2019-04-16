@@ -1,0 +1,38 @@
+
+body {
+	text-align: center;
+}
+
+canvas {
+	border: 1px solid black;
+}
+
+#game-container {
+	position: relative;
+}
+
+#game-container .pacman-canvas{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+#game-canvas {
+	z-index: 100;
+}
+
+#maze-canvas {
+	background-color: black;
+}
+
+.images {
+	display: none;
+}
+
+#restart {
+	font-size: 20px;
+	border-radius: 2px;
+	background-color: brown;
+	color: yellow;
+	display : none;
+}

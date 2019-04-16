@@ -1,0 +1,45 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Page title</title>
+        <link rel="stylesheet" href="css/pacman.css">
+		<script type="text/javascript" src="scripts/pacman.js"></script>
+    </head>
+    <body>
+    <!-- your content will go there..  -->
+    <h3>The Pacman Game</h3>
+    <button id="restart" onclick="restartGame()">Restart</button>
+    <div id="game-container">
+      <canvas id="game-canvas" class="pacman-canvas" ></canvas>
+      <canvas id="maze-canvas" class="pacman-canvas" ></canvas>
+    </div>
+    <div class="images">
+        <img id="wallImage" src="img/wall.jpg" />
+        <img id="blueGhostImage" src="img/blueG.jpg" />   
+        <img id="orangeGhostImage" src="img/orangeG.jpg" />    
+        <img id="purpleGhostImage" src="img/purpleG.jpg" />   
+        <img id="redGhostImage" src="img/redG.jpg" />    
+    </div>
+
+
+
+    
+    <script>
+      window.onload = function() {
+        var lives = 3;
+        while(lives >= 0){
+           game = createGame("#game-canvas", "#maze-canvas");
+           game.start(); 
+           lives--;
+        }        
+      }
+
+      function restartGame(){
+          gameover = "inProgress";
+          //if(gameover == "Lose")document.getElementById("restart").style.display = "none";
+        }
+    </script>
+    
+    </body>
+    </html>
